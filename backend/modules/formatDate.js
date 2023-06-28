@@ -8,9 +8,5 @@ function formatDate(date){
         dateEnd:moment(endDate).format()}
 }
 
-/*let dateStart = 
-  let dateEnd = 
-  dateStart = moment(dateStart).format();
-  dateEnd = moment(dateEnd).format()*/
 
   module.exports = {formatDate}

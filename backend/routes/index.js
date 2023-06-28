@@ -13,7 +13,7 @@ router.get('/', function(req, res, next) {
 router.get('/:departure/:arrival/:date', (req,res) => {
   const departure = req.params.departure;
   const arrival = req.params.arrival;
-  const date = formatDate(req.params.date)
+  const date = formatDate(req.params.date);
   Trip.find({departure:{$regex: new RegExp(departure, "i")}, arrival:{$regex: new RegExp(arrival, "i")}, date:{$gte:date.dateStart, $lte:date.dateEnd}})
   .then(data => {
       if(data[0]) {
